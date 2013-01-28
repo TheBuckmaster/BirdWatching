@@ -21,6 +21,7 @@
 		31894ADF16AF00400030D608 /* BirdsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31894ADE16AF00400030D608 /* BirdsMasterViewController.m */; };
 		31894AE216AF00400030D608 /* BirdsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31894AE116AF00400030D608 /* BirdsDetailViewController.m */; };
 		31894AEA16AF0DD10030D608 /* BirdSighting.m in Sources */ = {isa = PBXBuildFile; fileRef = 31894AE916AF0DD10030D608 /* BirdSighting.m */; };
+		31DDF9FE16B7326400D7788E /* AddSightingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DDF9FD16B7326400D7788E /* AddSightingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		31894AE116AF00400030D608 /* BirdsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BirdsDetailViewController.m; sourceTree = "<group>"; };
 		31894AE816AF0DD10030D608 /* BirdSighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSighting.h; sourceTree = "<group>"; };
 		31894AE916AF0DD10030D608 /* BirdSighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSighting.m; sourceTree = "<group>"; };
+		31DDF9FC16B7326400D7788E /* AddSightingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSightingViewController.h; sourceTree = "<group>"; };
+		31DDF9FD16B7326400D7788E /* AddSightingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSightingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				31894AD116AF00400030D608 /* BirdsAppDelegate.h */,
 				31894AD216AF00400030D608 /* BirdsAppDelegate.m */,
 				31894ADA16AF00400030D608 /* MainStoryboard.storyboard */,
+				31DDF9FC16B7326400D7788E /* AddSightingViewController.h */,
+				31DDF9FD16B7326400D7788E /* AddSightingViewController.m */,
 				31894ADD16AF00400030D608 /* BirdsMasterViewController.h */,
 				31894ADE16AF00400030D608 /* BirdsMasterViewController.m */,
 				31894AE016AF00400030D608 /* BirdsDetailViewController.h */,
@@ -195,6 +200,7 @@
 				31894AE216AF00400030D608 /* BirdsDetailViewController.m in Sources */,
 				31894AEA16AF0DD10030D608 /* BirdSighting.m in Sources */,
 				312CCB9616B1A23200C0455A /* BirdSightingDataController.m in Sources */,
+				31DDF9FE16B7326400D7788E /* AddSightingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
