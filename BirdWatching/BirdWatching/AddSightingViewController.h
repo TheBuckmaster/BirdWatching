@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AddSightingViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UITextField *birdNameInput;
+@property (weak, nonatomic) IBOutlet UITextField *locationInput;
 
 @end
