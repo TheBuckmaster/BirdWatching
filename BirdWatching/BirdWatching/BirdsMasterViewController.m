@@ -13,12 +13,17 @@
 #import "BirdSightingDataController.h"
 
 #import "BirdSighting.h"
+
+#import "AddSightingViewController.h"
+
 /*
 @interface BirdsMasterViewController () {
     NSMutableArray *_objects;
 }
 @end
 */
+
+
 @implementation BirdsMasterViewController
 
 - (void)awakeFromNib
@@ -31,6 +36,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.navigationItem.rightBarButtonItem.accessibilityHint = @"Adds a new bird-sighting event.";
     
     /*
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -130,6 +137,34 @@
     return YES;
 }
 */
+
+- (IBAction)done:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"ReturnInput"])
+    {
+        AddSightingViewController *addController = [segue sourceViewController];
+        
+        if (addController.birdSighting){
+            [self.dataController addBirdSightingWithSighting:addController.birdSighting];
+            [[self tableView] reloadData];
+        }
+
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+
+}
+         
+- (IBAction)cancel:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"CancelInput"])
+    {
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    }
+        
+
+
+}
+         
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

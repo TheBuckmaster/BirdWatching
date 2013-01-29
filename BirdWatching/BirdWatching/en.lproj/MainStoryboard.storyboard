@@ -103,6 +103,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="rP7-4K-Bxe" id="NpO-wS-TVz"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -133,6 +136,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="rP7-4K-Bxe" id="siB-aU-fxc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -173,8 +179,16 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oGZ-fj-Xsj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AcQ-Xz-I59"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="lEr-vx-ZxO"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="AcQ-Xz-I59">
+                            <connections>
+                                <segue destination="Ajs-gd-8Ni" kind="unwind" identifier="CancelInput" unwindAction="cancel:" id="qqD-Z0-Ocn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="lEr-vx-ZxO">
+                            <connections>
+                                <segue destination="Ajs-gd-8Ni" kind="unwind" identifier="ReturnInput" unwindAction="done:" id="EYf-z5-rlm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -183,8 +197,9 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ty9-M4-rLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ajs-gd-8Ni" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="-646"/>
+            <point key="canvasLocation" x="1393" y="-646"/>
         </scene>
         <!--Birds Detail View Controller-->
         <scene sceneID="0Ix-p6-KdI">
@@ -324,9 +339,16 @@
         </class>
         <class className="BirdsMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BirdsMasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="done:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
